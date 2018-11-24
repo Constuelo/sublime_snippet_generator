@@ -34,7 +34,10 @@ with open(snippet_template, 'r') as template:
             output = template_content
 
             try:
-                output = output.replace('$name', name)
+                if lowercase:
+                    output = output.replace('$name', name.lower())
+                else:
+                    output = output.replace('$name', name)
             except NameError as error:
                 print(f'{error}')
 
@@ -47,9 +50,6 @@ with open(snippet_template, 'r') as template:
                 output = output.replace('$scope', scope)
             except NameError as error:
                 print(f'{error}')
-
-            if lowercase:
-                name = name.lower()
 
             with open(Path(snippets_path / str(name + snippet_ext)), 'w') as write_file:
                 write_file.write(output)
