@@ -14,9 +14,7 @@ snippets_path = Path(os.path.dirname(__file__) + snippets_dir)
 content_path = Path(os.path.dirname(__file__) + convert_dir)
 list_path = os.listdir(content_path)
 
-"""
-    Empty the snippets folder if it already exists
-"""
+""" Empty the snippets folder if it already exists """
 if os.path.exists(snippets_path):
     shutil.rmtree(snippets_path)
 os.makedirs(snippets_path, exist_ok=True)
