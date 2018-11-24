@@ -1,34 +1,34 @@
 import os
 from pathlib import Path
+import shutil
 
-"""
-    Generates sublime snippets based from files
-"""
-
-scope = 'text.html'
-name = ''
-content = ''
-output = None
-lowercase = False  # Set True or False to set case in file names
-
-convert_dir = '/convert_me'
-snippets_dir = '/snippets'
-snippet_template = 'template.sublime-snippet'
-snippet_ext = '.sublime-snippet'
+snippet_template = 'template.sublime-snippet'  # Base template
+snippet_ext = '.sublime-snippet'  # Extension name for sublimes snippet files
+scope = 'text.html'  # Default is text.html
+lowercase = True  # Set True or False to set case in file names
+convert_dir = '/convert_me'  # Location for input files
+snippets_dir = '/snippets'  # Output of files
 
 path = Path(os.path.dirname(__file__))
 snippets_path = Path(os.path.dirname(__file__) + snippets_dir)
 content_path = Path(os.path.dirname(__file__) + convert_dir)
 list_path = os.listdir(content_path)
 
+"""
+    Empty the snippets folder if it already exists
+"""
+if os.path.exists(snippets_path):
+    shutil.rmtree(snippets_path)
+os.makedirs(snippets_path, exist_ok=True)
+
 with open(snippet_template, 'r') as template:
     template_content = template.read()
 
-    for dir, subdir, files in os.walk(content_path):
-        for file in files:
+    for d, s, f in os.walk(content_path):
+        for file in f:
             name = file.split(".")[0]
 
-            html = os.path.join(dir, file)
+            html = os.path.join(d, file)
             with open(html, 'r') as html:
                 content = html.read()
             output = template_content
