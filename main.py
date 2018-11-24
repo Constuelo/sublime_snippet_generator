@@ -54,4 +54,5 @@ with open(snippet_template, 'r') as template:
             with open(Path(snippets_path / str(name + snippet_ext)), 'w') as write_file:
                 write_file.write(output)
 
+print(f'All good.')
 
