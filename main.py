@@ -2,11 +2,17 @@ import os
 from pathlib import Path
 import shutil
 
-snippet_template = 'template.sublime-snippet'  # Base template
-snippet_ext = '.sublime-snippet'  # Extension name for sublimes snippet files
+"""
+    tabTrigger = inherits the input files name without the extension, set lowercase = True or False
+    scope = default to text.html below, can be changed to any string
+    content = is read from the input files contents
+"""
 scope = 'text.html'  # Default is text.html
-lowercase = True  # Set True or False to set case in file names
-convert_dir = '/convert_me'  # Location for input files
+lowercase = True  # Set True or False
+
+snippet_ext = '.sublime-snippet'  # Extension name for sublimes snippet files
+snippet_template = 'template.sublime-snippet'  # Base template
+convert_dir = '/convert'  # Location for input files
 snippets_dir = '/snippets'  # Output of files
 
 path = Path(os.path.dirname(__file__))
