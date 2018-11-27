@@ -12,8 +12,8 @@ Python 3.x
 How to
 ------------
 
-1. copy the files you want to convert into the ``convert_me`` folder (the files can be inside folders)
-2. run ``python main.py``
+1. Copy the files you want to convert into the ``convert_me`` folder (the files can be inside folders)
+2. Run ``python main.py``
 3. The output files can be found inside ``snippets``
 
 The tabTrigger is taken from the files name (not including it's extention). The case can be inherited or set to lowercase.
@@ -32,15 +32,15 @@ Example
 
 Input
 --------
-p.html
+File Name: p.html
 
-.. code:: html
+File Contents:
 <p>Hello World!</p>
 
 
 Output
 --------
-p.sublime.snippet
+p.sublime.snippet file
 
 
 <snippet>
