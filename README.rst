@@ -19,10 +19,8 @@ How to
 The tabTrigger is taken from the files name (not including it's extention).
 The content is taken from the content of the file.
 the scope is set to text.html by default, the variable can be set inside the main.py file.
-``
-scope = 'text.html'  # Default is text.html
-lowercase = True  # Set True or False
-``
+``scope = 'text.html'  # Default is text.html``
+``lowercase = True  # Set True or False``
 
 Example
 ------------
@@ -30,16 +28,12 @@ Example
 Input
 --------
 p.html
-``
-<p>Hello World!</p>
-
-``
+``<p>Hello World!</p>``
 
 Output
 --------
 p.sublime.snippet
-``
-<snippet>
+``<snippet>
 	<content><![CDATA[
 <p>Hello World!</p>
 ]]></content>
@@ -47,5 +41,4 @@ p.sublime.snippet
 	<tabTrigger>p</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.html</scope>
-</snippet>
-``
+</snippet>``
