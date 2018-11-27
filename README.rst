@@ -28,12 +28,17 @@ Example
 Input
 --------
 p.html
-``<p>Hello World!</p>``
+
+.. role:: bash(code)
+   :language: bash
+   <p>Hello World!</p>
 
 Output
 --------
 p.sublime.snippet
-``<snippet>
+.. role:: bash(code)
+   :language: bash
+<snippet>
 	<content><![CDATA[
 <p>Hello World!</p>
 ]]></content>
@@ -41,4 +46,4 @@ p.sublime.snippet
 	<tabTrigger>p</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>text.html</scope>
-</snippet>``
+</snippet>
