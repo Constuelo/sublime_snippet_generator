@@ -16,11 +16,16 @@ How to
 2. run ``python main.py``
 3. The output files can be found inside ``snippets``
 
-The tabTrigger is taken from the files name (not including it's extention).
-The content is taken from the content of the file.
-the scope is set to text.html by default, the variable can be set inside the main.py file.
-``scope = 'text.html'  # Default is text.html``
+The tabTrigger is taken from the files name (not including it's extention). The case can be inherited or set to lowercase.
+
 ``lowercase = True  # Set True or False``
+
+The content is taken from the content of the file.
+the scope is set to ``text.html`` by default, the variable can be set inside the main.py file.
+
+``scope = 'text.html'  # Default is text.html``
+
+
 
 Example
 ------------
@@ -39,9 +44,7 @@ p.sublime.snippet
 
 
 <snippet>
-	<content><![CDATA[
-<p>Hello World!</p>
-]]></content>
+	<content><![CDATA[<p>Hello World!</p>]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>p</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
