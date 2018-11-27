@@ -6,18 +6,23 @@ sublime_snippet_generator
 
 Requires
 ------------
-Supports Python 3.6.7
+Python 3.x
 
 
 How to
 ------------
 
-1. copy the files into the ``convert_me`` folder (the files can be inside folders)
+1. copy the files you want to convert into the ``convert_me`` folder (the files can be inside folders)
 2. run ``python main.py``
 3. The output files can be found inside ``snippets``
 
 The tabTrigger is taken from the files name (not including it's extention).
 The content is taken from the content of the file.
+the scope is set to text.html by default, the variable can be set inside the main.py file.
+``
+scope = 'text.html'  # Default is text.html
+lowercase = True  # Set True or False
+``
 
 Example
 ------------
