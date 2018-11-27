@@ -29,15 +29,15 @@ Input
 --------
 p.html
 
-.. role:: bash(code)
-   :language: bash
-   <p>Hello World!</p>
+.. code:: html
+<p>Hello World!</p>
+
 
 Output
 --------
 p.sublime.snippet
-.. role:: bash(code)
-   :language: bash
+
+
 <snippet>
 	<content><![CDATA[
 <p>Hello World!</p>
